@@ -3,7 +3,23 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('energikampen', ['ionic'])
+angular.module('minApp', ['ionic'])
+
+
+.controller('myController', function($scope) {
+  $scope.tasks = [
+    { title: 'Ola', score: 1234 },
+    { title: 'Anna' , score: 2434},
+    { title: 'Bosse', score: 102 },
+    { title: 'Lasse', score: 243 }
+  ]
+  $scope.menuChoice = [
+    { title: 'Home', link: 'index.html'},
+    { title: 'Challenge', link: 'challenge.html'},
+    { title: 'Highscore', link: 'index.html'},
+    { title: 'Achivements', link: 'achivements.html'}
+  ];
+})
 
 
 .run(function($ionicPlatform) {
@@ -18,6 +34,3 @@ angular.module('energikampen', ['ionic'])
     }
   });
 });
-
-
-
