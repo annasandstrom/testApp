@@ -5,7 +5,12 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+<!--tillagd av änabänäna-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+     <link href="lib/angular-chart.js/dist/angular-chart.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -33,34 +38,34 @@
             <h1 class="title">Min app</h1>
           </ion-header-bar>
 
+          <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+            <div class="tabs">
+              <a class="tab-item active" href="index.html">
+                <i class="icon ion-home"></i>
+                home
+              </a>
+              <a class="tab-item" href="challenge.html">
+                <i class="icon ion-person-stalker"></i>
+                challenge
+              </a>
+              <a class="tab-item" href="highscore.html">
+                <i class="icon ion-ios-list-outline"></i>
+                highscore
+              </a>
+               <a class="tab-item" href="achivements.html">
+                <i class="icon ion-trophy"></i>
+                achivements
+              </a>
+            </div>
+
+          </div >
           <ion-content>
-            <!-- our list and list items -->
-            <ion-list>
-              <ion-item ng-repeat="task in tasks">
-                {{task.title}} {{task.score}}
-              </ion-item>
-            </ion-list>
+          <br><br><br><br><br><br><br><br>
+            <center><label class="test"><input ng-model="test" class="form-control test" type="text">Hej{{test}}</input></label></center>
           </ion-content>
+
         </ion-side-menu-content>
-
-      <!-- Left menu -->
-      <ion-side-menu side="left">
-        <ion-header-bar class="bar-dark">
-          <h1 class="title">Meny</h1>
-        </ion-header-bar>
-
-        <ion-content scroll="false">
-            <!-- our list and list items -->
-            <ion-list>
-              <ion-item ng-repeat="menuChoice in menuChoice">
-                <a href={{menuChoice.link}}> 
-                  {{menuChoice.title}}
-                </a>
-              </ion-item>
-            </ion-list>
-          </ion-content>
       </ion-side-menu>
-
     </ion-side-menus>
   </body>
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+  </head>
+
+  <body ng-app="minApp" ng-controller="myController">
+
+    <ion-side-menus>
+
+      <!-- Center content -->
+        <ion-side-menu-content>
+          <ion-header-bar class="bar-dark">
+            <h1 class="title">Min app</h1>
+          </ion-header-bar>
+
+          <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+            <div class="tabs">
+              <a class="tab-item" href="index.html">
+                <i class="icon ion-home"></i>
+                home
+              </a>
+              <a class="tab-item" href="challenge.html">
+                <i class="icon ion-person-stalker"></i>
+                challenge
+              </a>
+              <a class="tab-item active" href="highscore.html">
+                <i class="icon ion-ios-list-outline"></i>
+                highscore
+              </a>
+               <a class="tab-item" href="achivements.html">
+                <i class="icon ion-trophy"></i>
+                achivements
+              </a>
+            </div>
+          </div>
+
+          <ion-content>
+            <!-- Highscore list-->
+            <!--get rid of these stupid breaks-->
+            <br><br><br><br><br><br><br><br>
+
+
+            <ion-list>
+              <ion-item ng-repeat="task in tasks">
+                <left>{{task.pos}}. {{task.title}} {{task.score}}
+            </ion-list>
+            <br>
+            <ion-list>
+              <ion-item>
+                34. Anna 123
+            </ion-list>
+
+          </ion-content>
+        </ion-side-menu-content>
+      </ion-side-menu>
+    </ion-side-menus>
+  </body>
+
+</html>

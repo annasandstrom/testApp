@@ -8,15 +8,15 @@ angular.module('minApp', ['ionic'])
 
 .controller('myController', function($scope) {
   $scope.tasks = [
-    { title: 'Ola', score: 1234 },
-    { title: 'Anna' , score: 2434},
-    { title: 'Bosse', score: 102 },
-    { title: 'Lasse', score: 243 }
+    { pos: 1, title: 'Ola', score: 1234 },
+    { pos: 2, title: 'Anna' , score: 1232},
+    { pos: 3, title: 'Bosse', score: 1022 },
+    { pos: 4, title: 'Lasse', score: 783 }
   ]
   $scope.menuChoice = [
     { title: 'Home', link: 'index.html'},
     { title: 'Challenge', link: 'challenge.html'},
-    { title: 'Highscore', link: 'index.html'},
+    { title: 'Highscore', link: 'highscore.html'},
     { title: 'Achivements', link: 'achivements.html'}
   ];
 })

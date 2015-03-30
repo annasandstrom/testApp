@@ -33,32 +33,37 @@
             <h1 class="title">Min app</h1>
           </ion-header-bar>
 
+          <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+            <div class="tabs">
+              <a class="tab-item" href="index.html">
+                <i class="icon ion-home"></i>
+                home
+              </a>
+              <a class="tab-item" href="challenge.html">
+                <i class="icon ion-person-stalker"></i>
+                challenge
+              </a>
+              <a class="tab-item" href="highscore.html">
+                <i class="icon ion-ios-list-outline"></i>
+                highscore
+              </a>
+               <a class="tab-item active" href="achivements.html">
+                <i class="icon ion-trophy"></i>
+                achivements
+              </a>
+            </div>
+          </div>
+
+
+
           <ion-content>
-            <!-- our list and list items -->
-            <ion-list>
-              <ion-item ng-repeat="task in tasks">
-                {{task.title}} {{task.score}}
-              </ion-item>
-            </ion-list>
+          <!--get rid of these stupid breaks-->
+            <br><br><br><br><br><br><br><br>
+
           </ion-content>
+
         </ion-side-menu-content>
-
-      <!-- Left menu -->
-      <ion-side-menu side="left">
-        <ion-header-bar class="bar-dark">
-          <h1 class="title">Meny</h1>
-        </ion-header-bar>
-
-        <ion-content>
-            <!-- our list and list items -->
-            <ion-list>
-              <ion-item ng-repeat="menuChoice in menuChoice">
-                {{menuChoice.title}} {{task.score}}
-              </ion-item>
-            </ion-list>
-          </ion-content>
       </ion-side-menu>
-
     </ion-side-menus>
   </body>
 

@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+ion-content {
+	background-color: #dbdbdb; 
+}
+
+.test {
+	text-align: center;
+}
+
+
+ion-list {
+	Text-align: center;
+}
